@@ -1,0 +1,6 @@
+*.har
+*.log
+logs/
+local.properties
+.idea/
+build/
