@@ -2,9 +2,9 @@
 
 这是一个用于领取 **小蚕惠生活 SVIP 大牌券** 的 Android 定时工具。应用可以从你自己导出的 HAR 文件中识别登录会话，在设定时间前预热连接并执行领取请求。
 
-> 当前版本：**2.4.1**（versionCode 7）  
+> 当前版本：**2.4.2**（versionCode 8）  
 > 最低系统：Android 8.0（API 26）  
-> APK SHA-256：`D824F475D72A414944185BE1FE1B4CFEE50F2D4F85057040E35ED6A90275C223`
+> APK SHA-256：`C629C02D6D84AEE20058AD2F592FEEB28D28F1016EED71FB0ADA9F2A627D28D7`
 
 ## 用途说明
 
@@ -33,6 +33,12 @@
 小蚕惠生活会员专区的大牌畅享页面显示保底通用大牌券为“已领取”。
 
 <img src="docs/images/03-coupon-claimed.jpg" alt="小蚕惠生活通用大牌券已领取" width="420">
+
+## QQ 交流群
+
+使用问题、版本更新和测试反馈可加入 QQ 群：**467063305**。APK 内也已加入群号复制按钮和二维码。
+
+<img src="docs/images/qq-group-467063305.jpg" alt="QQ交流群 467063305 二维码" width="420">
 
 ## 用途说明
 
@@ -70,6 +76,13 @@
 - 自动请求不保证成功；网络、服务器限流、会话过期和手机省电策略都会影响结果。
 - 请遵守目标服务的用户协议和活动规则。
 
+## 2.4.2 更新内容
+
+- 新增 QQ 交流群 `467063305`；
+- 新增一键复制群号按钮；
+- 新增群二维码展示；
+- 保留 2.4.1 的定时与连接调度逻辑。
+
 ## 2.4.1 更新内容
 
 - 目标时间前 500ms 开始尝试，临近整点自动加密请求节奏；
@@ -80,7 +93,7 @@
 > 抢券结果仍受账号资格、库存、网络和平台响应影响，不承诺每次成功。
 ## 一、下载安装 APK
 
-1. 在仓库文件列表中找到 `SVIP-timer-v2.4.1-reserved.apk`。
+1. 在仓库文件列表中找到 `SVIP-timer-v2.4.2-qq.apk`。
 2. 点击文件，再点击 **Download raw file（下载原始文件）**。
 3. 手机上打开下载完成的 APK。
 4. 如果系统提示“禁止安装未知应用”，进入设置，只对当前浏览器或文件管理器临时允许安装。
@@ -263,12 +276,12 @@ HAR 是网络请求记录文件。应用需要从 HAR 中读取你自己的登�
 Windows PowerShell：
 
 ```powershell
-Get-FileHash .\SVIP-timer-v2.4.1-reserved.apk -Algorithm SHA256
+Get-FileHash .\SVIP-timer-v2.4.2-qq.apk -Algorithm SHA256
 ```
 
 正确结果：
 
 ```text
-D824F475D72A414944185BE1FE1B4CFEE50F2D4F85057040E35ED6A90275C223
+C629C02D6D84AEE20058AD2F592FEEB28D28F1016EED71FB0ADA9F2A627D28D7
 ```
 
