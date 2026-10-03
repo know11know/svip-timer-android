@@ -2,9 +2,23 @@
 
 这是一个用于领取 **小蚕惠生活 SVIP 大牌券** 的 Android 定时工具。应用可以从你自己导出的 HAR 文件中识别登录会话，在设定时间前预热连接并执行领取请求。
 
-> 当前版本：**2.4.2**（versionCode 8）  
+> 当前版本：**2.4.3**（versionCode 9）  
 > 最低系统：Android 8.0（API 26）  
-> APK SHA-256：`C629C02D6D84AEE20058AD2F592FEEB28D28F1016EED71FB0ADA9F2A627D28D7`
+> APK SHA-256：`32F1FF28073FEED101720DE6F9B927CF045B11CA4E47E5720ED2C5C19441D200`
+
+## 2.4.3 更新内容
+
+- 新增首次启动隐私提示，用户可选择是否参加匿名统计；
+- 新增匿名安装、启动、版本、验证结果、任务结果和网络异常统计；
+- 新增应用内反馈输入框；
+- 新增网页数据面板，展示下载量、累计安装、日活、近30天活跃、成功记录和反馈数量；
+- 新增带渠道参数的 APK 下载地址；
+- **不会上传 HAR、Cookie、Token、账号或其他登录凭证**；
+- 开放 Android 客户端和统计后台源代码。
+
+下载文件：[`SVIP-timer-v2.4.3-analytics.apk`](SVIP-timer-v2.4.3-analytics.apk)
+
+源代码目录：[`android-app`](android-app) · [`web`](web)
 
 ## 用途说明
 

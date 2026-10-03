@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>定时领券助手</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<main>
+  <header><span class="badge">WEB</span><h1>定时领券助手</h1><p>前后端一体化定时任务面板</p><p><a class="download" href="/download?from=website">下载 Android v2.4.3</a></p></header>
+  <section class="card">
+    <div class="row"><h2>匿名使用数据</h2><button class="secondary" id="refreshStats">刷新</button></div>
+    <div class="stats">
+      <div><strong id="statDownloads">—</strong><span>APK 下载</span></div>
+      <div><strong id="statInstalls">—</strong><span>累计安装</span></div>
+      <div><strong id="statDau">—</strong><span>今日活跃</span></div>
+      <div><strong id="statMau">—</strong><span>近30天活跃</span></div>
+      <div><strong id="statSuccess">—</strong><span>成功记录</span></div>
+      <div><strong id="statFeedback">—</strong><span>用户反馈</span></div>
+    </div>
+    <p class="hint">安装人数为匿名安装编号的近似统计；卸载后重装可能被计算为新安装。</p>
+  </section>
+  <section class="card">
+    <h2>导入登录态</h2>
+    <div class="upload-box">
+      <input id="harFile" type="file" accept=".har,application/json">
+      <button type="button" id="parseHar">识别 HAR 登录态</button>
+    </div>
+    <div id="sessionStatus" class="session-status muted">尚未选择 HAR 文件</div>
+    <p class="hint">文件只在当前浏览器内解析，不上传服务器、不写入数据库；关闭或刷新页面后需重新选择。</p>
+  </section>
+  <section class="card">
+    <h2>新建任务</h2>
+    <form id="jobForm">
+      <label>券类型<input id="couponType" value="大牌券" maxlength="50"></label>
+      <label>目标时间<input id="targetTime" value="09:30:00.000" pattern="\d{2}:\d{2}:\d{2}\.\d{3}" required></label>
+      <div class="grid"><label>尝试次数<input id="attempts" type="number" min="1" max="5" value="1"></label><label>间隔（秒）<input id="intervalSeconds" type="number" min="1" step="0.1" value="1"></label></div>
+      <button type="submit" id="createJob" disabled>创建定时任务</button>
+    </form>
+    <p class="hint">识别到登录态后才能创建任务；当前后端仍按配置的授权接口执行。</p>
+  </section>
+  <section class="card"><div class="row"><h2>任务与日志</h2><button class="secondary" id="refresh">刷新</button></div><div id="jobs" class="jobs"><p class="muted">暂无任务</p></div></section>
+</main>
+<script src="/app.js"></script>
+</body></html>

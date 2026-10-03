@@ -4,3 +4,9 @@ logs/
 local.properties
 .idea/
 build/
+
+web/data/
+web/__pycache__/
+android-app/build/
+android-app/android.jar
+android-app/debug.keystore
